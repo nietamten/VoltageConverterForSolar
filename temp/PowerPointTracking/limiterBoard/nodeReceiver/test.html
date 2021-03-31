@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+    <style>
+        html, body {
+          height: 100%;
+          margin: 0;
+        }
+        
+        .full-height {
+          height: 100%;
+          background: yellow;
+        }
+        </style>    
+</head>
+
+<body>
+    abc
+    <div class="full-height" id="chart"></div>
+
+    <script>
+
+        //https://stackoverflow.com/questions/247483/http-get-request-in-javascript
+        function httpGet(theUrl) {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", theUrl, false); // false for synchronous request
+            xmlHttp.send(null);
+            return xmlHttp.responseText;
+        }
+
+        function getData() {
+            return Math.random();
+        }
+
+
+        Plotly.plot('chart', [{
+            x: [],
+            y: [],
+            type: 'line',
+            name:'Vout'
+        },
+        {
+            x: [],
+            y: [],
+            type: 'line',
+            name:'Vin'            
+        },
+        {
+            x: [],
+            y: [],
+            type: 'line',
+            name:'PWM'            
+        },
+        {
+            x: [],
+            y: [],
+            type: 'line',
+            name:'Cout'            
+        },
+        {
+            x: [],
+            y: [],
+            type: 'line',
+            name:'Pout'            
+        }                
+        ]);
+
+
+        function extLine(arr, s) {
+            if (arr.length != 0) {
+
+                var now = new Date();
+                now = now.getFullYear();
+
+                let X = [];
+                let Y = [];
+                arr.forEach(function (obj) {
+                    let d = new Date(obj.time);
+                    if (d.getFullYear() == now && obj.value != 65535) {
+                        X.push(d);
+                        console.log(d);
+
+                        if (s == 2)
+                            Y.push(obj.value/100);
+                        else
+                        if (s == 4)
+                            Y.push(obj.value/4000);
+                        else                        
+                            Y.push(Number(obj.value).toFixed(2)/10);
+                    }
+                })
+
+                Plotly.extendTraces('chart', { x: [X], y: [Y] }, [s],500);
+                //Plotly.extendTraces('chart', {y: [[rand()], [rand()]]}, [0, 1], 10)
+/*
+                cnt += arr.length;
+
+                if (cnt > 500) {
+                    Plotly.relayout('chart', {
+                        xaxis: {
+                            range: [cnt - 500, cnt]
+                        }
+                    });
+                }
+                */
+            }
+        }
+
+
+        var cnt = 0;
+        setInterval(function () {
+            let txt = httpGet("data");
+            let obj = JSON.parse(txt);
+            //let arr = obj.VO;
+
+            extLine((obj.VO), 0);
+            extLine(obj.VI, 1);
+            extLine(obj.P, 2);
+            extLine(obj.CO, 3);
+            extLine(obj.PO, 4);                        
+            
+
+        }
+            , 100);
+        //var intervalID = setInterval(alert, 1000);
+    </script>
+</body>
+
+</html>
