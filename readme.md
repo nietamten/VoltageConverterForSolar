@@ -43,7 +43,7 @@ Troubleshooting:
 - devices near converter stops working (usb mouse)
  - use ferrite filters on input and output
  
-Testing
+Testing  
 Device was tested with 4x parallel 75W 91VOC 67VMP solar panels on long wires.
 The load was little 24V 300W water heater.
 The heater was left on the whole sunny day in room temperature and stay not damagd.
