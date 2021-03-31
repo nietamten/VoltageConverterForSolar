@@ -35,13 +35,13 @@ for example LM5008 based converter. Using LM5008 also significantly reduces heat
 
 Troubleshooting:
 - converter is oscillating fast (there is output power)
- - increase input capacity
- - add low ESR capacitors on input, for example ceramic
- - change frequency (R7)
+  - increase input capacity
+  - add low ESR capacitors on input, for example ceramic
+  - change frequency (R7)
 - converter is oscillating slower (a little or no power on outpu)
- - decrease output capacity to prevent over current 
+  - decrease output capacity to prevent over current 
 - devices near converter stops working (usb mouse)
- - use ferrite filters on input and output
+  - use ferrite filters on input and output
  
 Testing  
 Device was tested with 4x parallel 75W 91VOC 67VMP solar panels on long wires.
