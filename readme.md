@@ -38,7 +38,7 @@ Troubleshooting:
   - increase input capacity
   - add low ESR capacitors on input, for example ceramic
   - change frequency (R7)
-- converter is oscillating slower (a little or no power on outpu)
+- converter is oscillating slower (a little or no power on output)
   - decrease output capacity to prevent over current 
 - devices near converter stops working (usb mouse)
   - use ferrite filters on input and output
