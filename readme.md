@@ -30,19 +30,20 @@ for example LM5008 based converter. Using LM5008 also significantly reduces heat
 - current sensing resistor (R13, R16) limits maximum current, use lower resistance when more current is needed to not burn it
 - RT pin resistor (R7) was tested between 22k and 47k (90-180kHz), lower resistance (higher frequency) makes more heat on NCP1034, BD911 and AOB414 but seems to improve stability
 (I have oversized inductor). Setting too high frequency can very fast cause overheat and damage to NCP1034.
+- Touching working converter parts near NCP1034 (for example to check heating) can easily cause damage of NCP1034 and AOB414. Especially overcurrent and soft start circuits.
 
 
 Troubleshooting:
 - converter is oscillating fast (there is output power)
- - increase input capacity
- - add low ESR capacitors on input, for example ceramic
- - change frequency (R7)
-- converter is oscillating slower (a little or no power on outpu)
- - decrease output capacity to prevent over current 
+  - increase input capacity
+  - add low ESR capacitors on input, for example ceramic
+  - change frequency (R7)
+- converter is oscillating slower (a little or no power on output)
+  - decrease output capacity to prevent over current 
 - devices near converter stops working (usb mouse)
- - use ferrite filters on input and output
+  - use ferrite filters on input and output
  
-Testing
+Testing  
 Device was tested with 4x parallel 75W 91VOC 67VMP solar panels on long wires.
 The load was little 24V 300W water heater.
 The heater was left on the whole sunny day in room temperature and stay not damagd.
