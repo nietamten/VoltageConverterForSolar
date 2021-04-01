@@ -9,7 +9,7 @@ Because of overcompensation there probably are voltage overshoots.
 Powering of devices directly is risky (device can be damaged). Maybe compensation network can be repaired for that purpose.
 For some devices it can be no problem. For batteries I think it is no problem at all.
 
-There is separate output anode with current limit. It can be used simultaneously with not than not limited.
+There is separate output anode with current limit. It can be used simultaneously with than not limited.
 For example battery can be charged with limiting (to not damage it by overcurrent) and some device can use non-limited anode to not distgurb charging.
 It is not working ideally (limited output can limit that not limited) but can be helpfull.
 
