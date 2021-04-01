@@ -24,7 +24,7 @@ Converter allows power to flow in reverse direction, when there is no input vola
 Assembly notices:
 - read NCP1034 datasheet and use xls "design worksheet"
 - BD911 gives off a lot of heat, don't ommit radiator, it will be damaged on 15V supply overload
-For testing, when short circuits are possible, raplacing BD911 based regulator with some other, more failproof
+For testing, when short circuits are possible, raplace BD911 based regulator with some other, more failproof
 for example LM5008 based converter. Using LM5008 also significantly reduces heat of whole device on light loads.
 - do not ommit 3x100nF capacitors on imput, it can cause instability
 - current sensing resistor (R13, R16) limits maximum current, use lower resistance when more current is needed to not burn it
