@@ -4,6 +4,7 @@ Converter is overcompensated and still have stability problems.
 Compensation network is single 100nF capacitor between NCP1034 COMP pinn and GND.
 Problem occurs when input current is low, then converter makes some sound and output capacitors heats a little.
 This is not critical for me and converter is useful with that but it would be nice to correct it.
+Minimum input voltage limiter seems to besource of oscillations, maybe additional compensation there?
 
 Because of overcompensation there probably are voltage overshoots.
 Powering of devices directly is risky (device can be damaged). Maybe compensation network can be repaired for that purpose.
@@ -14,7 +15,7 @@ For example battery can be charged with limiting (to not damage it by overcurren
 It is not working ideally (limited output can limit that not limited) but can be helpfull.
 
 Minimum input voltage limit can increase output power by keeping solar panels near maximum power point.
-It can be regulated by applying load higher than solar panels power (or when panel are no well illuminated) and measuring output power.
+It can be regulated by applying load higher than solar panels power (or when panel are no well illuminated, but not too low illuminated because looses on BD911 regulator becomes dominant and then input voltages lower than at power point gives more power on output) and measuring output power.
 Limiting screw should stay in position where power is highest.
 
 NCP1034 have max 80% PWM duty cycle, all power can not pass throw.
