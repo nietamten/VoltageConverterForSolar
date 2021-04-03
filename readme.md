@@ -51,7 +51,7 @@ Device was tested with 4x parallel 75W 91VOC 67VMP solar panels on long wires.
 The load was little 24V 300W water heater.
 The heater was left on the whole sunny day in room temperature and stay not damagd.
 Voltage on output was for some time about 27V so I suspect that it was more than 300W.
-AOB414, BD911 and NCP1034 was scalding hot but below 100C. I'm not sure it can survive that load in higher ambient temperature.
+AOB414, BD911 and NCP1034 was very hot but below 100C. I'm not sure it can survive that load in higher ambient temperature.
 With lighter loads (I'm guessing about 200W) BD911 is hottest. With LM5008 whole converter is only a little warm.
 
 
