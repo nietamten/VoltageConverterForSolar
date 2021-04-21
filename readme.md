@@ -5,6 +5,10 @@ Compensation network is single 100nF capacitor between NCP1034 COMP pinn and GND
 Problem occurs when input current is low, then converter makes some sound and output capacitors heats a little.
 This is not critical for me and converter is useful with that but it would be nice to correct it.
 
+There was some effort to make converter more stable. Minimum output voltage circuit have some additional compensation.
+Result is not well tested. 
+
+
 Because of overcompensation there probably are voltage overshoots.
 Powering of devices directly is risky (device can be damaged). Maybe compensation network can be repaired for that purpose.
 For some devices it can be no problem. For batteries I think it is no problem at all.

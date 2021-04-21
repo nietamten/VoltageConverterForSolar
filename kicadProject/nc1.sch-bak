@@ -1478,4 +1478,38 @@ Wire Wire Line
 Connection ~ 4100 6200
 Wire Wire Line
 	4100 6200 4100 5550
+$Comp
+L Device:C C?
+U 1 1 6080FE58
+P 4800 6550
+F 0 "C?" V 5050 6600 50  0000 C CNN
+F 1 "470n" V 4950 6600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 4838 6400 50  0001 C CNN
+F 3 "~" H 4800 6550 50  0001 C CNN
+	1    4800 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60811B0D
+P 4800 6850
+F 0 "R?" V 4593 6850 50  0000 C CNN
+F 1 "4.7k" V 4684 6850 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 4730 6850 50  0001 C CNN
+F 3 "~" H 4800 6850 50  0001 C CNN
+	1    4800 6850
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60812927
+P 4800 7000
+F 0 "#PWR?" H 4800 6750 50  0001 C CNN
+F 1 "GND" H 4805 6827 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm" H 4805 6736 50  0001 C CNN
+F 3 "" H 4800 7000 50  0001 C CNN
+	1    4800 7000
+	1    0    0    -1  
+$EndComp
+Connection ~ 4800 6400
 $EndSCHEMATC
