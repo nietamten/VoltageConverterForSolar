@@ -3,15 +3,7 @@ Kicad project of NCP1034 based buck converter with features useful for solar pan
 After adjusting compensation network with "Design Spreadsheet for NCP1034" seems to be stable  
 If it's not, see troubleshooting section.
 
-There was some effort to make converter more stable. Minimum output voltage circuit have some additional compensation.
-Result is not well tested. 
-
-
-Because of overcompensation there probably are voltage overshoots.
-Powering of devices directly is risky (device can be damaged). Maybe compensation network can be repaired for that purpose.
-For some devices it can be no problem. For batteries I think it is no problem at all.
-
-There is separate output anode with current limit. It can be used simultaneously with than not limited.
+There is separate output anode with current limit. It can be used simultaneously with that not limited.
 For example battery can be charged with limiting (to not damage it by overcurrent) and some device can use non-limited anode to not distgurb charging.
 It is not working ideally (limited output can limit that not limited) but can be helpfull.
 
@@ -20,8 +12,7 @@ It can be regulated by applying load higher than solar panels power (or when pan
 Limiting screw should stay in position where power is highest.
 
 NCP1034 have max 80% PWM duty cycle, all power can not pass throw.
-Converter allows power to flow in reverse direction, when there is no input volatge and on output is battery, battery will charge input capacitors and power on converter for a second. In that case output diode is needed to not discharge battery.
-
+Output diodes (D6 and D9) can be replaced with wire, but then converter allows power to flow in reverse direction. When there is no input volatge and on output is battery, battery can charge input capacitors and power on converter and cause losses. 
 
 Assembly notices:
 - read NCP1034 datasheet and use xls "design worksheet"
