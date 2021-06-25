@@ -1,10 +1,7 @@
 Kicad project of NCP1034 based buck converter with features useful for solar panels and batteries.
 
-Converter is overcompensated and still have stability problems. 
-Compensation network is single 100nF capacitor between NCP1034 COMP pinn and GND.
-Problem occurs when input current is low, then converter makes some sound and output capacitors heats a little.
-This is not critical for me and converter is useful with that but it would be nice to correct it.
-Minimum input voltage limiter seems to besource of oscillations, maybe additional compensation there?
+After adjusting compensation network with "Design Spreadsheet for NCP1034" seems to be stable  
+If it's not, see troubleshooting section.
 
 There was some effort to make converter more stable. Minimum output voltage circuit have some additional compensation.
 Result is not well tested. 
@@ -36,7 +33,7 @@ for example LM5008 based converter. Using LM5008 also significantly reduces heat
 - RT pin resistor (R7) was tested between 22k and 47k (90-180kHz), lower resistance (higher frequency) makes more heat on NCP1034, BD911 and AOB414 but seems to improve stability
 (I have oversized inductor). Setting too high frequency can very fast cause overheat and damage to NCP1034.
 - Touching working converter parts near NCP1034 (for example to check heating) can easily cause damage of NCP1034 and AOB414. Especially overcurrent and soft start circuits.
-
+- do not mount parts without values, for exaple C21
 
 Troubleshooting:
 - converter is oscillating fast (there is output power)
@@ -47,6 +44,10 @@ Troubleshooting:
   - decrease output capacity to prevent over current
   - increase current limit (decrease R11), 5k seems to be safe
   - decrease output volage
+- converter is oscillating when minimum voltage limit is working
+  - try increase C19 or C18
+- converter is oscillating when current limiter is working
+  - try increase C16 or experiment with C22
 - devices near converter stops working (usb mouse)
   - use ferrite filters on input and output
  
