@@ -52,3 +52,6 @@ With lighter loads (I'm guessing about 200W) BD911 is hottest. With LM5008 whole
 
 
 There is not completed automatic maximum power point tracking extension board with some measurments on UART 
+
+V2 tagged version is better for self-made PCB's but have mistake - no resistor at output of  max input voltage limiting opamp.
+V3 tagged verion is for PCB's with metalized holes, radiator for transistors can be on second PCB side.
